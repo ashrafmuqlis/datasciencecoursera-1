@@ -6,7 +6,7 @@ lists     --> can contain any combination of object type using list() function
 vector()  --> multiple copies of the same object type
           --> can also use the c() function to concatenate objects together to form a vector
           --> if objects are of different types then R will perform coercion to transform every object into the same type
-          --> can name elements using name()
+          --> can name elements using name() or vect <- c(foo=11,bar=2,norf=NA)
 
 as.*      --> explicit type conversion
 
@@ -33,6 +33,7 @@ data.frame()  --> a list of lists, where each element is used to represent a col
               --> read.table(), read.csv()
               --> convert to matrix using data.matrix()
               --> attribute data.names
+              --> colnames() to set column names
 
 subsetting objects in R, aka element access and slicing
               --> [ , [[, and $ extracts elements of a list or frame by name, be aware of return types
@@ -40,6 +41,9 @@ subsetting objects in R, aka element access and slicing
               --> missing indices for a dimension denotes all elements
               --> partial matching using , exact=FALSE
               --> can access using vector indices
+
+paste() --> similar to the string join function in python
+
 
 reading and writing data
 read.table(), write.table()   --> set colClasses using sapply() and class() functions
