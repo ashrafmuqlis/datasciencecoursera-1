@@ -1,0 +1,28 @@
+WEEK_01:
+
+file.exits()  --> check if file or directory exists and creates if not.
+dir.create()
+
+download.file() --> downloads files from an url/the web
+                --> on mac set method="curl"
+
+read.table()  --> related to read.csv() and read.csv2()
+
+read.xlsx() --> library xlsx package
+            --> read.xlsx2()
+write.xlsx()
+
+XML data format --> XML package, xmlTreeParse(), xmlRoot()
+extracting parts of an xml file --> xmlSApply(), can use an regex form of parsing.
+
+JSON data format --> library jsonlite, fromJSON( pretty=TRUE), makes the layout human readable
+              --> can take an url or a json object
+
+data.table()  --> similar to data.frame though written in C and much much faster
+              --> view data.tables in memory using tables() function
+              --> differs from data.frame when subsetting columns. Need to use expressions rather than vector of column names
+
+
+WEEK_02:
+
+

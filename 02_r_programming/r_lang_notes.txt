@@ -1,0 +1,62 @@
+WEEK_01:
+
+lists     --> can contain any combination of object type using list() function
+          --> lists can have named elements, access using $ operator
+
+vector()  --> multiple copies of the same object type
+          --> can also use the c() function to concatenate objects together to form a vector
+          --> if objects are of different types then R will perform coercion to transform every object into the same type
+          --> can name elements using name()
+
+as.*      --> explicit type conversion
+
+is.na(), is.nan()   --> undefined or missing data values, NA, NaN
+                    --> complete.cases() function performs is.* on multiple vectors
+
+numeric values --> double precision floats, integer uses suffix L, NaN for not a number
+
+factor values   --> factor() function, represent categorical data, ordered or unordered, can be thought of as an integer with a label
+                --> see attributes, table(), unclass()
+
+attributes() --> access attributes or properties of a data type
+
+assignment operator is <-
+
+matrix(values,nrow=,ncol=)  --> described as an integer vector of length two (nrow,ncol)
+                            --> matrices are created column-wise so the values will iterate down the columns
+                            --> can coerce vector objects into matrix objects by assigning a dim() using c() function
+                            --> or using the cbind() and rbind() functions, column and row resp
+                            --> dimnames() to assign row and column names, generally as a list
+                            --> subsetting returns a vector, disable by using drop=FALSE
+
+data.frame()  --> a list of lists, where each element is used to represent a column
+              --> read.table(), read.csv()
+              --> convert to matrix using data.matrix()
+              --> attribute data.names
+
+subsetting objects in R, aka element access and slicing
+              --> [ , [[, and $ extracts elements of a list or frame by name, be aware of return types
+              --> similar to python and matlab, accepts logical indices and expressions
+              --> missing indices for a dimension denotes all elements
+              --> partial matching using , exact=FALSE
+              --> can access using vector indices
+
+reading and writing data
+read.table(), write.table()   --> set colClasses using sapply() and class() functions
+                              --> also use unix command wc to find row number
+read.csv()
+readLines, writeLines   --> iterate through a text file
+source, dump      --> reading R code files
+dget, dput        --> reading R code files
+load, save        --> reading in saved R workspaces
+unserialize, serilize --> reading R objects in binary form
+
+connection interfaces   --> very similar to python
+file()        --> opens connection to a file
+gzfile()      --> gzip connection
+bzfile()      --> bzip2 connection
+url()         --> web page
+
+WEEK_02:
+
+
