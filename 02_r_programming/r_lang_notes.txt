@@ -1,5 +1,3 @@
-WEEK_01:
-
 lists     --> can contain any combination of object type using list() function
           --> lists can have named elements, access using $ operator
 
@@ -19,8 +17,12 @@ factor values   --> factor() function, represent categorical data, ordered or un
                 --> see attributes, table(), unclass()
 
 attributes() --> access attributes or properties of a data type
+              --> dim() and class() are similar
 
 assignment operator is <-
+
+%operator% --> %*% will perform matrix multiplication, otherwise if the normal operators are used for vectors or matrices
+                you will have element-wise operations
 
 matrix(values,nrow=,ncol=)  --> described as an integer vector of length two (nrow,ncol)
                             --> matrices are created column-wise so the values will iterate down the columns
@@ -34,6 +36,7 @@ data.frame()  --> a list of lists, where each element is used to represent a col
               --> convert to matrix using data.matrix()
               --> attribute data.names
               --> colnames() to set column names
+              --> nrow, ncol for number of rows and columns
 
 subsetting objects in R, aka element access and slicing
               --> [ , [[, and $ extracts elements of a list or frame by name, be aware of return types
@@ -44,8 +47,17 @@ subsetting objects in R, aka element access and slicing
 
 paste() --> similar to the string join function in python
 
+identical() --> compare objects
+
+dates and times
+R using the Date package and time follows POSIX
+    --> as.Date(), as.POSIXlt() and as.POSIXct() and then check names() or class()
+    --> strptime() function is very useful for dealing with strange date formats
+
 
 reading and writing data
+list.files(path=directory, pattern="*.csv")  --> to list files in a directory, use rbind to join multiple data frames
+
 read.table(), write.table()   --> set colClasses using sapply() and class() functions
                               --> also use unix command wc to find row number
 read.csv()
@@ -60,7 +72,4 @@ file()        --> opens connection to a file
 gzfile()      --> gzip connection
 bzfile()      --> bzip2 connection
 url()         --> web page
-
-WEEK_02:
-
 
