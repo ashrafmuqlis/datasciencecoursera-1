@@ -14,7 +14,7 @@ is.na(), is.nan()   --> undefined or missing data values, NA, NaN
 numeric values --> double precision floats, integer uses suffix L, NaN for not a number
 
 factor values   --> factor() function, represent categorical data, ordered or unordered, can be thought of as an integer with a label
-                --> see attributes, table(), unclass()
+                --> see attributes(), table(), unclass()
 
 attributes() --> access attributes or properties of a data type
               --> dim() and class() are similar
