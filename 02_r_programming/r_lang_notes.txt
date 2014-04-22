@@ -15,6 +15,7 @@ numeric values --> double precision floats, integer uses suffix L, NaN for not a
 
 factor values   --> factor() function, represent categorical data, ordered or unordered, can be thought of as an integer with a label
                 --> see attributes(), table(), unclass()
+                --> use gl() function to generate factors and interaction() function for multilevel factors.
 
 attributes() --> access attributes or properties of a data type
               --> dim() and class() are similar
@@ -49,11 +50,14 @@ paste() --> similar to the string join function in python
 
 identical() --> compare objects
 
+lapply --> functional style similar to map and fold functions. Many versions and also see split().
+        --> can use ... notation for passing named function arguments.
+apply  --> has special functions defined for matrices such as row and column means or sums. Also see mapply().
+
 dates and times
 R using the Date package and time follows POSIX
     --> as.Date(), as.POSIXlt() and as.POSIXct() and then check names() or class()
     --> strptime() function is very useful for dealing with strange date formats
-
 
 reading and writing data
 list.files(path=directory, pattern="*.csv")  --> to list files in a directory, use rbind to join multiple data frames
