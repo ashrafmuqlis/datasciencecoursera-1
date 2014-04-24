@@ -20,7 +20,8 @@ factor values   --> factor() function, represent categorical data, ordered or un
 attributes() --> access attributes or properties of a data type
               --> dim() and class() are similar
 
-assignment operator is <-
+assignment operator is <-, the <<- operator will assign to variables outside of the current scope.
+                          For example, to a predefined variable in the parent scope.
 
 %operator% --> %*% will perform matrix multiplication, otherwise if the normal operators are used for vectors or matrices
                 you will have element-wise operations
@@ -52,7 +53,7 @@ identical() --> compare objects
 
 lapply --> functional style similar to map and fold functions. Many versions and also see split().
         --> can use ... notation for passing named function arguments.
-apply  --> has special functions defined for matrices such as row and column means or sums. Also see mapply().
+apply  --> has special functions defined for matrices such as row and column means or sums. Also see tapply() and mapply().
 
 dates and times
 R using the Date package and time follows POSIX
