@@ -55,10 +55,30 @@ lapply --> functional style similar to map and fold functions. Many versions and
         --> can use ... notation for passing named function arguments.
 apply  --> has special functions defined for matrices such as row and column means or sums. Also see tapply() and mapply().
 
+str() --> similar to the python str function.
+
+summary() --> returns the summary statistics of the argument passed.
+
+simulation
+  rnorm, dnorm, pnorm, rpois --> functions for probability distributions in R.
+                          --> d is for density,
+                          --> r is for random number generation,
+                          --> p is for cumulative distribution,
+                          --> q is for quantile function.
+                          --> can use basic operations to combine and produce complicated models.
+  sample() --> a function to randomly sample from an arbitrary distribution with or without replacement.
+
 dates and times
 R using the Date package and time follows POSIX
     --> as.Date(), as.POSIXlt() and as.POSIXct() and then check names() or class()
     --> strptime() function is very useful for dealing with strange date formats
+
+profiling and code optimisation
+  system.time(), Rprof(), summaryRprof()
+
+optimisation in R
+  optim, nlm, optimize --> function which require a function pointer or reference to be passed as a argument.
+                      --> It is useful to create constructor functions to generate these, for example, the negative log likelihood function.
 
 reading and writing data
 list.files(path=directory, pattern="*.csv")  --> to list files in a directory, use rbind to join multiple data frames
