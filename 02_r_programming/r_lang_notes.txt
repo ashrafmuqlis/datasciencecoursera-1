@@ -10,6 +10,7 @@ as.*      --> explicit type conversion
 
 is.na(), is.nan()   --> undefined or missing data values, NA, NaN
                     --> complete.cases() function performs is.* on multiple vectors
+is.element()  --> similar to set containment and python "in" operator.
 
 numeric values --> double precision floats, integer uses suffix L, NaN for not a number
 
