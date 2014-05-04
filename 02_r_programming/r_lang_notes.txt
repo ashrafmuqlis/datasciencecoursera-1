@@ -53,7 +53,11 @@ identical() --> compare objects
 
 lapply --> functional style similar to map and fold functions. Many versions and also see split().
         --> can use ... notation for passing named function arguments.
+split() -->
 apply  --> has special functions defined for matrices such as row and column means or sums. Also see tapply() and mapply().
+
+do.call() -->
+
 
 str() --> similar to the python str function.
 
