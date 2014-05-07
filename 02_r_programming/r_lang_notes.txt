@@ -47,6 +47,7 @@ subsetting objects in R, aka element access and slicing
               --> missing indices for a dimension denotes all elements
               --> partial matching using , exact=FALSE
               --> can access using vector indices
+              --> subset() function
 
 paste() --> similar to the string join function in python
 
@@ -54,7 +55,7 @@ identical() --> compare objects
 
 lapply --> functional style similar to map and fold functions. Many versions and also see split().
         --> can use ... notation for passing named function arguments.
-split() -->
+split() --> compare to subset() function
 apply  --> has special functions defined for matrices such as row and column means or sums. Also see tapply() and mapply().
 
 do.call() -->
@@ -70,7 +71,7 @@ simulation
                           --> r is for random number generation,
                           --> p is for cumulative distribution,
                           --> q is for quantile function.
-                          --> can use basic operations to combine and produce complicated models.
+                          --> can use basic operations to combine and produce complicated models, very similar to the mathematical notation.
   sample() --> a function to randomly sample from an arbitrary distribution with or without replacement.
 
 dates and times

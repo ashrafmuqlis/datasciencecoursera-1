@@ -1,5 +1,3 @@
-WEEK_01:
-
 file.exits()  --> check if file or directory exists and creates if not.
 dir.create()
 
@@ -22,7 +20,5 @@ data.table()  --> similar to data.frame though written in C and much much faster
               --> view data.tables in memory using tables() function
               --> differs from data.frame when subsetting columns. Need to use expressions rather than vector of column names
 
-
-WEEK_02:
 
 

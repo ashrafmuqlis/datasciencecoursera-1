@@ -1,0 +1,19 @@
+Principles of plotting/exploring data --> always compare, display all the information (multivariate), think Tufte!
+
+with() --> function used in combination with other plotting functions
+        --> link with points() function for highlighting/discriminating certain data samples or use subset() function.
+transform() --> seems similar to the apply method but for dataframes.
+
+abline() --> used to display descriptive statistics or measures of spread and central tendancy
+
+lattice plotting system --> useful for plotting multiple graphs of a variable being conditioned by various factors.
+
+ggplot2 --> newer plotting system and a mixture of the two above.
+
+par() --> used to specify global graphics parameters
+      --> for multiple plots set par(mfrow = c(1,2)) # one row and two columns and then in the with() function use {} braces
+        to denote the different plotting options.
+
+plotting to a different graphics device --> this is the device window manager etc. but also includes printing to pdf, use pdf() function
+                                        followed by dev.off() function to flush.
+                                          --> also can use dev.copy() function!!!
