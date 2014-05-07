@@ -20,5 +20,20 @@ data.table()  --> similar to data.frame though written in C and much much faster
               --> view data.tables in memory using tables() function
               --> differs from data.frame when subsetting columns. Need to use expressions rather than vector of column names
 
+summary() --> useful for describing the data frame and information contained therein.
+str()     --> similar to python str() function.
 
+quantile()  --> quantiles for quantitative variables.
 
+xtabs() --> useful for cross tabulated data, think confusion matrix style.
+
+creating binary variables --> ifelse() function
+creating categorical variables --> use cut() and cut2() functions. Can also use factor() function.
+
+reshaping data --> can explode row entries with multiple columns into multiple row entries using the melt() function.
+melt()   -->
+dcast()   ---> also used to reshape data frames. The '~' operator is used to breakdown a variables by another variable.
+
+merge()  --> merge data frames on common column names, similar to joins in sql and python.
+
+tolower() , toupper(), strsplit(), grep(), sub(), gsub() --> text editing functions.

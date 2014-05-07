@@ -11,6 +11,7 @@ as.*      --> explicit type conversion
 is.na(), is.nan()   --> undefined or missing data values, NA, NaN
                     --> complete.cases() function performs is.* on multiple vectors
 is.element()  --> similar to set containment and python "in" operator.
+              --> %in% for finding values with specific characteristics.
 
 numeric values --> double precision floats, integer uses suffix L, NaN for not a number
 
@@ -26,6 +27,7 @@ assignment operator is <-, the <<- operator will assign to variables outside of 
 
 %operator% --> %*% will perform matrix multiplication, otherwise if the normal operators are used for vectors or matrices
                 you will have element-wise operations
+
 
 matrix(values,nrow=,ncol=)  --> described as an integer vector of length two (nrow,ncol)
                             --> matrices are created column-wise so the values will iterate down the columns
@@ -48,6 +50,7 @@ subsetting objects in R, aka element access and slicing
               --> partial matching using , exact=FALSE
               --> can access using vector indices
               --> subset() function
+              --> to return the indices use the which() function on the logical expression
 
 paste() --> similar to the string join function in python
 
@@ -57,6 +60,8 @@ lapply --> functional style similar to map and fold functions. Many versions and
         --> can use ... notation for passing named function arguments.
 split() --> compare to subset() function
 apply  --> has special functions defined for matrices such as row and column means or sums. Also see tapply() and mapply().
+
+sort() and order() --> used for sorting though order() is more general
 
 do.call() -->
 
