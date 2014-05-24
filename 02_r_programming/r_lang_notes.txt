@@ -65,6 +65,8 @@ sort() and order() --> used for sorting though order() is more general
 
 do.call() -->
 
+Aggregating data --> use plyr package and the aggregate() or ddply() functions.
+
 
 str() --> similar to the python str function.
 
