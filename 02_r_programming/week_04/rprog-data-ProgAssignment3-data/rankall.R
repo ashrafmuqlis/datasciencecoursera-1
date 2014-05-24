@@ -34,7 +34,7 @@ rankall <- function(outcome, num = "best") {
   list_rankings_df <- lapply(list_state_df, function(state_df) rank(state_df, outcome_col, num))
   all_rankings_df <- do.call("rbind", list_rankings_df)
   all_rankings_df[,7] <- row.names(all_rankings_df)
-  result <- data.frame(hospital=all_rankings_df[,2] , state= all_rankings_df[,7])
+  result <- data.frame(hospital=all_rankings_df[,2] , state=all_rankings_df[,7])
   row.names(result) <- row.names(all_rankings_df)
   result
 }
