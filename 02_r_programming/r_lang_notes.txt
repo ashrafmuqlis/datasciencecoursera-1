@@ -73,6 +73,7 @@ str() --> similar to the python str function.
 summary() --> returns the summary statistics of the argument passed.
 
 simulation
+  seed --> use to make random number generation simulations reproducible.
   rnorm, dnorm, pnorm, rpois --> functions for probability distributions in R.
                           --> d is for density,
                           --> r is for random number generation,
