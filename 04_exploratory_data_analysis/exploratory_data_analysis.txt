@@ -20,9 +20,13 @@ plotting to a different graphics device --> this is the device window manager et
                                           --> also can use dev.copy() function!!!
 
 clustering analysis --> using hierarchical plotting, knearest-neighbours, and kmeans
+                    --> dist() function for generating the distance matrix (kernel matrix).
 
 dimensionality reduction --> using principle component analysis and singular value decomposition
+                          --> scale() function to scale the data appropriately.
 
 visualisation and colour --> colourramp, colouramppalette, and RcolourBrewer. These are very similar to the
                             colour palette system in python.
+                          --> can use heatmap() or image() functions to display output.
+                          --> segments() function can be used to connect points plotted on the display device.
 
