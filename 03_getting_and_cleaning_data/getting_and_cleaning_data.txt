@@ -38,3 +38,4 @@ dcast()   --> also used to reshape data frames. The '~' operator is used to brea
 merge()  --> merge data frames on common column names, similar to joins in sql and python.
 
 tolower() , toupper(), strsplit(), grep(), sub(), gsub() --> text editing functions.
+make.names() --> to reformat column names for use with a dataframe.
