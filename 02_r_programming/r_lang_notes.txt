@@ -19,6 +19,8 @@ factor values   --> factor() function, represent categorical data, ordered or un
                 --> see attributes(), table(), unclass()
                 --> use gl() function to generate factors and interaction() function for multilevel factors.
 
+seq() --> will generate a sequence of values.
+
 attributes() --> access attributes or properties of a data type
               --> dim() and class() are similar
 
