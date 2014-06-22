@@ -32,7 +32,7 @@ creating categorical variables --> use cut() and cut2() functions. Can also use 
 
 reshaping data --> can explode row entries with multiple columns into multiple row entries using the melt() function.
 melt()   -->
-dcast()   --> also used to reshape data frames. The '~' operator is used to breakdown a variables by another variable, for example a two dimensional plot.
+dcast()   --> also used to reshape data frames. The '~' operator is used to breakdown variables by another variable, for example a two dimensional plot.
           --> Do not confuse this with conditioning in the lattice() plotting system which uses | symbol.
 
 merge()  --> merge data frames on common column names, similar to joins in sql and python.
