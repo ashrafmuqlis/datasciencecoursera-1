@@ -1,5 +1,5 @@
 When implementing a linear model (regression) in R use the following:
 
-lm --> dependent var ~ independent vars. This also has the summary and predict functions defined.
+lm --> dependent var ~ independent vars. This also has the summary, predict, and resid functions defined.
 		--> useful for determining the significance of parameter estimates and confidence and prediction intervals.
 		
