@@ -1,5 +1,12 @@
 When implementing a linear model (regression) in R use the following:
 
-lm --> dependent var ~ independent vars. This also has the summary, predict, confint, and resid functions defined.
+lm --> dependent var ~ independent vars (include -1 in the independant variables to remove the constant intercept from the model). 
+		--> This also has the summary, predict, confint, and resid functions defined.
 		--> useful for determining the significance of parameter estimates and confidence and prediction intervals.
-		
+		--> use update() function and anova to do nested model fitting and analysis.
+
+pairs() --> useful for exploratory data analysis by plotting all pairs of variables.
+
+influence.measures --> used to determine regression model fits etc. Has some relation to outliers.
+					--> dfbetas the influence of one sample point on the coefficients.
+					--> hatvalues the leverage of the model fit?
