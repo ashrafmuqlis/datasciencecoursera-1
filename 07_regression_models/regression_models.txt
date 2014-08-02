@@ -6,6 +6,8 @@ lm --> dependent var ~ independent vars (include -1 in the independant variables
 		--> use confint() function with agnostic parameter for model agnostic standard errors.
 		--> use update() function and anova to do nested model fitting and analysis.
 
+glm --> similar to the linear model function though you can specify the linking function, linear estimator, and distribution family, i.e., poisson
+
 pairs() --> useful for exploratory data analysis by plotting all pairs of variables.
 
 influence.measures --> used to determine regression model fits etc. Has some relation to outliers.
