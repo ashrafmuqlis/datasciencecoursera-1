@@ -1,60 +1,77 @@
 # Question 1
-data(mtcars)
-fit <- lm(mpg~factor(cyl) + wt, data=mtcars)
-summary(fit)
-# Answer: correct
-# 4 cylinders factor variable is used as the base reference and the estimate for 
-# expected change is -6.0709 mpg comparing 8 cylinders to 4 cylinders.
+# Consider the space shuttle data ?shuttle in the MASS library. 
+# Consider modeling the use of the autolander as the outcome (variable name use). 
+# Fit a logistic regression model with autoloader (variable auto) use (labeled as "auto" 1) 
+# versus not (0) as predicted by wind sign (variable wind). 
+# Give the estimated odds ratio for autoloader use comparing head winds, 
+# labeled as "head" in the variable headwind (numerator) to tail winds (denominator).
+install.packages("MASS")
+library(MASS)
+data(shuttle)
+shuttle$useNum[shuttle$use == 'auto'] <- 1
+shuttle$useNum[shuttle$use == 'noauto'] <- 0
+shuttle$windFactor <- factor(shuttle$wind)
+logAutolander1 <- glm(shuttle$useNum ~ shuttle$windFactor, family='binomial')
+summary(logAutolander1)
+# Answer: 0.969
 
 # Question 2
-data(mtcars)
-fit1 <- lm(mpg~factor(cyl) + wt, data=mtcars)
-fit2 <- lm(mpg~factor(cyl), data=mtcars)
-summary(fit1)
-summary(fit2)
-# Answer: Holding weight constant, cylinder appears to have 
-# less of an impact on mpg than if weight is disregarded.
+# Consider the previous problem. Give the estimated odds ratio for autoloader use 
+# comparing head winds (numerator) to tail winds (denominator) adjusting for 
+# wind strength from the variable magn.
+install.packages("MASS")
+library(MASS)
+data(shuttle)
+shuttle$useNum[shuttle$use == 'auto'] <- 1
+shuttle$useNum[shuttle$use == 'noauto'] <- 0
+shuttle$windFactor <- factor(shuttle$wind)
+shuttle$windMagnFactor <- factor(shuttle$magn)
+logAutolander2 <- glm(shuttle$useNum ~ shuttle$windFactor + shuttle$windMagnFactor, family='binomial')
+summary(logAutolander2)
+exp(logAutolander2$coef)
+# Answer: 0.969
+
 
 # Question 3
-data(mtcars)
-fit1 <- lm(mpg~factor(cyl) + wt, data=mtcars)
-fit2 <- update(fit1, mpg~factor(cyl) + wt + wt*factor(cyl))
-summary(fit1)
-summary(fit2)
-# Answer:
-# The P-value is larger than 0.05. So, according to our criterion, 
-# we would fail to reject, which suggests that the interaction terms may not be necessary. correct
+# If you fit a logistic regression model to a binary variable, 
+# for example use of the autolander, then fit a logistic regression 
+# model for one minus the outcome (not using the autolander) what happens to the coefficients?
+# Answer: The coefficients reverse their signs.
 
 # Question 4
-data(mtcars)
-fit <- lm(mpg ~ I(wt * 0.5) + factor(cyl), data = mtcars)
-summary(fit)
-# The estimated expected change in MPG per one ton increase in 
-# weight for the particular number of cylinders (8, 6, 4).
+# Consider the insect spray data InsectSprays. 
+# Fit a Poisson model using spray as a factor level. 
+# Report the estimated relative rate comapring spray A (numerator) to spray B (denominator).
+data(InsectSprays)
+subsetSpray <- InsectSprays[InsectSprays$spray == 'A' | InsectSprays$spray == 'B',]
+poissonInsectSpray <- glm(subsetSpray$count ~ subsetSpray$spray, family='poisson')
+summary(poissonInsectSpray)
+# Answer: 0.9457
 
 # Question 5
-# Give the hat diagonal for the most influential point.
-x <- c(0.586, 0.166, -0.042, -0.614, 11.72)
-y <- c(0.549, -0.026, -0.127, -0.751, 1.344)
-fit <- lm(y~x)
-influence.measures(fit)
-# Answer: 0.9946 correct
+# Consider a Poisson glm with an offset, t. So, for example, 
+# a model of the form glm(count ~ x + offset(t), family = poisson) where x 
+# is a factor variable comparing a treatment (1) to a control (0) and t is 
+# the natural log of a monitoring time. What is impact of the coefficient for 
+# x if we fit the model glm(count ~ x + offset(t2), family = poisson) 
+# where t2 <- log(10) + t? In other words, what happens to the coefficients 
+# if we change the units of the offset variable. (Note, adding log(10) on the 
+# log scale is multiplying by 10 on the original scale.)
+# Answer: The coefficient estimate is unchanged
 
 # Question 6
-# Give the slope dfbeta for the point with the highest hat value.
-x <- c(0.586, 0.166, -0.042, -0.614, 11.72)
-y <- c(0.549, -0.026, -0.127, -0.751, 1.344)
-fit <- lm(y~x)
-influence.measures(fit)
-# Answer: -134 correct
+# Using a knot point at 0, fit a linear model that looks like a hockey 
+# stick with two lines meeting at x=0. Include an intercept term, x and 
+# the knot point term. What is the estimated slope of the line after 0?
+x <- -5:5
+y <- c(5.12, 3.93, 2.67, 1.87, 0.52, 0.08, 0.93, 2.05, 2.54, 3.87, 4.97)
+knots<-c(0)
+splineTerms<-sapply(knots, function(knot)(x > knot)*(x - knot)) 
+xMat<-cbind(1,x,splineTerms)
+linearModel <- lm(y~xMat-1)
+yhat<-predict(linearModel) 
+plot(x,y,frame=FALSE,pch=21,bg="lightblue",cex=2) 
+lines(x,yhat,col="red",lwd=2)
+# Answer: 1.013
 
-# Question 7
-# Consider a regression relationship between Y and X with and without 
-# adjustment for a third variable Z. Which of the following is true 
-# about comparing the regression coefficient between Y and X with 
-# and without adjustment for Z.
-# Answer: 
-# It is possible for the coefficient to reverse sign after adjustment. 
-# For example, it can be strongly significant and positive before adjustment 
-# and strongly significant and negative after adjustment. correct
 
